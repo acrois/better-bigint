@@ -1,27 +1,22 @@
-name: CI
-
+name: CI Build
 on:
   push:
     branches:
       - main
-
   pull_request:
     branches:
       - main
-
 jobs:
   test:
     runs-on: ${{ matrix.os }}
-
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
       fail-fast: false
-
     steps:
       - id: checkout
         name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - id: setup-bun
         name: Setup Bun
         uses: oven-sh/setup-bun@v1
@@ -32,6 +27,6 @@ jobs:
         run: |
           bun install
       - id: test
-        name: Run test
+        name: Run tests
         run: |
           bun test

@@ -1,9 +1,9 @@
 {
   "name": "better-bigint",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "description": "",
+  "description": "Provides the best JSON support for BigInt!",
   "scripts": {
     "build": "bun run build.mjs",
     "prepublishOnly": "bun run build"
@@ -12,19 +12,24 @@
     "dist"
   ],
   "keywords": [
-    "bun"
+    "bun",
+    "bigint",
+    "json",
+    "json-bigint",
+    "bigint-json",
+    "monkey-json"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/wobsoriano/pkg-name#readme",
+  "homepage": "https://github.com/acrois/better-bigint#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wobsoriano/pkg-name.git"
+    "url": "git+https://github.com/acrois/better-bigint.git"
   },
-  "bugs": "https://github.com/wobsoriano/pkg-name/issues",
-  "author": "Robert Soriano <sorianorobertc@gmail.com>",
+  "bugs": "https://github.com/acrois/better-bigint/issues",
+  "author": "Aaron Croissette <gh@acrois.dev>",
   "devDependencies": {
     "bun-plugin-dts": "^0.2.1",
-    "@types/bun": "^1.0.0",
-    "typescript": "^5.2.2"
+    "@types/bun": "^1.0.5",
+    "typescript": "^5.3.3"
   }
 }

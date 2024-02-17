@@ -1,14 +1,30 @@
-# bun starter
+# better-bigint
 
-## Getting Started
+Better JSON support for BigInt
 
-Click the [Use this template](https://github.com/wobsoriano/bun-lib-starter/generate) button to create a new repository with the contents starter.
+## Usage
 
-OR
+Install using bun (or npm, yarn, etc.):
 
-Run `bun create wobsoriano/bun-lib-starter ./my-lib`.
+```sh
+bun install better-bigint
+```
 
-## Setup
+Import it at the top of your entrypoint file:
+
+```ts
+import { betterBigInt } from 'better-bigint';
+```
+
+Somewhere before you start calling `JSON.parse`/`JSON.stringify`:
+
+```ts
+betterBigInt();
+```
+
+Now, stop thinking about it and go develop some software.
+
+## Contribute
 
 ```bash
 # install dependencies
