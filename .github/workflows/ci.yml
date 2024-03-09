@@ -1,11 +1,18 @@
 name: CI Build
 on:
+  # Runs on pushes targeting the default branch
   push:
     branches:
-      - main
+      - "**"
+      # - main
+      # - master
+      # - trunk
+    tags:
+      - "!**"
+  # Run every time a PR is updated
   pull_request:
-    branches:
-      - main
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 jobs:
   test:
     runs-on: ${{ matrix.os }}
@@ -25,7 +32,7 @@ jobs:
       - id: install-deps
         name: Install dependencies
         run: |
-          bun install
+          bun install --frozen-lockfile
       - id: test
         name: Run tests
         run: |
